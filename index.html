@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Resume Generator</title>
+</head>
+<body>
+
+    <form class="input-fields">
+        <h1 class="resume-title">Resume Generator</h1>
+          <input type="text" name="name" id="name" placeholder="Enter your name" /><br>
+          <input type="text" name="title" placeholder="Title e.g., Web Developer" /><br>
+          <textarea name="workexp" placeholder="Work experience"></textarea><br>
+          <textarea name="academics" placeholder="Academic details"></textarea><br>
+          <input name="objective" placeholder="Objective" /><br>
+          <textarea name="skills" placeholder="Skills"></textarea><br>
+          <textarea name="projects" placeholder="Projects"></textarea><br>
+          <textarea name="achievements" placeholder="Achievements"></textarea><br>
+          <textarea name="contact" placeholder="Contact"></textarea><br>
+    </form>
+    
+    <!-- Resume preview -->
+    <div class="output"></div>  
+    
+    <!-- Buttons for Preview/Edit, Share, and Download -->
+    <div class="btn">
+        <button onclick="toggle()">Preview or Edit</button>
+        <button onclick="generateShareableLink()">Share Resume</button>
+        <button onclick="downloadResumeAsPDF()">Download as PDF</button>
+    </div>
+    
+    <div id="shareable-link"></div>
+    
+    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
